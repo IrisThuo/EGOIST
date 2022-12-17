@@ -91,6 +91,7 @@ function showAnime(anime) {
                    <h3>episode Length: <h3>
                    <p>${episodeLength} minutes</p>`;
 
+      //ratings
   let rates= document.createElement('ul')
   rates.className= "rating"
   rates.innerHTML=`
@@ -174,6 +175,18 @@ function showManga(manga){
                    <h3>Status: updated last: </h3>
                    <p>${updatedAt}</p>`;
 
+
+  //ratings
+ let rates= document.createElement('ul')
+ rates.className= "rating"
+ rates.innerHTML=`
+     <li class="rating-item" data-rate="1"></li>
+     <li class="rating-item active" data-rate="2"></li>
+     <li class="rating-item" data-rate="3"></li>
+     <li class="rating-item" data-rate="4"></li>
+     <li class="rating-item" data-rate="5"></li>`
+
+   container.appendChild(rates)
    document.querySelector("#listings").appendChild(container);
 }
 
@@ -217,6 +230,7 @@ post.addEventListener('submit', (e)=> {
 //work out search bar functionality
 let search =document.getElementById('search-form')
 search.addEventListener('submit', (e)=> {
+
   // eliminate refresh feature 
   e.preventDefault()
 
