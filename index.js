@@ -64,7 +64,7 @@ function showings(){
 
      groupAnime.addEventListener('click', getAnime)
      groupManga.addEventListener('click', getManga)
-     groupManga.addEventListener('click', getCategories)
+     groupCategories.addEventListener('click', getCategories)
      
 //      groupManga.onclick = function(){document.getElementsByClassName('information').innerHTML = ''};
 //      groupAnime.onclick = function(){document.getElementsByClassName('information').innerHTML = ''};
@@ -119,7 +119,8 @@ function showManga(manga){
 function showCategories(categories){
   let { title, totalMediaCount, nsfw, createdAt, updatedAt} = categories.attributes
 
-     
+  // let head = document.createElement('h3')
+  // head.innerHTML=`<strong>Check For The Category You're Looking For, to Make Search Easy.</strong>`
 
   let container = document.createElement("info");
   container.className = "information"
@@ -132,6 +133,7 @@ function showCategories(categories){
                    <h3>Updated At: </h3>
                    <p>${updatedAt}</p>`;
 
+  //  document.querySelector('#heading').appendChild(head)
    document.querySelector("#listings").appendChild(container);
 }
 // eliminate refresh feature on submit buttons
