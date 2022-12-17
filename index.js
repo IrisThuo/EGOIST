@@ -91,11 +91,70 @@ function showAnime(anime) {
                    <h3>episode Length: <h3>
                    <p>${episodeLength} minutes</p>`;
 
+  let rates= document.createElement('ul')
+  rates.className= "rating"
+  rates.innerHTML=`
+  <li class="rating-item" data-rate="1"></li>
+  <li class="rating-item active" data-rate="2"></li>
+  <li class="rating-item" data-rate="3"></li>
+  <li class="rating-item" data-rate="4"></li>
+  <li class="rating-item" data-rate="5"></li>`
+
+  // let rate1 = document.createElement('li')
+  // rate1.className="rating-item"
+  // rate1.setAttribute("data-rate", "1")
+  // let rate2 = document.createElement('li')
+  // rate2.className="rating-item"
+  // rate2.setAttribute("data-rate", "2")
+  // let rate3 = document.createElement('li')
+  // rate3.className="rating-item"
+  // rate3.setAttribute("data-rate", "3")
+  // let rate4 = document.createElement('li')
+  // rate4.className="rating-item"
+  // rate4.setAttribute("data-rate", "4")
+  // let rate5 = document.createElement('li')
+  // rate5.className="rating-item"
+  // rate5.setAttribute("data-rate", "5")
+  
+  // rates.appendChild(rate1)
+  // rates.appendChild(rate2)
+  // rates.appendChild(rate3)
+  // rates.appendChild(rate4)
+  // rates.appendChild(rate5)
+  
+
+  // rates.onclick = e => {
+  //   const elClass = e.target.classList;
+  //   if(!elClass.contains('active')){
+  //     items.forEach(
+  //       item => item.classList.remove('active')
+  //     )
+  //     console.log(e.tarfet.getAttribute("data-rate"));
+  //     elClass.add(active)
+  //   }
+  //}
+
+  container.appendChild(rates)
+
   
 
    document.querySelector("#listings").appendChild(container);
 
    
+}
+
+//Rating functionality
+function rating(){
+  rates.onclick = e => {
+    const elClass = e.target.classList;
+    if(!elClass.contains('active')){
+      items.forEach(
+        item => item.classList.remove('active')
+      )
+      console.log(e.tarfet.getAttribute("data-rate"));
+      elClass.add(active)
+    }
+  }
 }
 
 function showManga(manga){
@@ -131,9 +190,12 @@ function showCategories(categories){
                    <p>${createdAt} </p>
                    <h3>Updated At: </h3>
                    <p>${updatedAt}</p>`;
+          
 
    document.querySelector("#listings").appendChild(container);
+   
 }
+
 
   //Work out Comment section Functionality
 let post = document.getElementById('comment-form')
@@ -163,7 +225,7 @@ search.addEventListener('submit', (e)=> {
   })
 
 
-//functionality to search bar
+
 
  
 function initialise() {
