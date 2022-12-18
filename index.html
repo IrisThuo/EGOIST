@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="stylesheet.css">
 </head>
 <body>
+    <section id="position">
     <!--header section-->
     <section class="header">
         <header>EGOIST</header>
@@ -17,14 +18,16 @@
     <section>
         <div id="nav"></div>
     </section>
-<!--Login pop up-->
+</section>
+<!--Login pop up
 <section>
     <div class="center">
         <div class="login-container">
+            <button id="close-btn">x</button>
            <div class="text">Login Form</div>
            <form action="#">
             <div class="data">
-                <label>Email or username</label>
+                <label>username</label>
                 <input type="text">
             </div>
             <div class="data">
@@ -33,13 +36,13 @@
             </div>
             <div class="btn">
                 <div class="inner"></div>
-                <button type="submit">LOGIN</button>
+                <button id="lgn-btn" type="submit">LOGIN</button>
             </div>
            </form>
         </div>
     </div>
 </section>
-
+-->
     <!--search bar-->
     <setion>
         <form id='search-form'>
@@ -48,7 +51,7 @@
           </form>
     </setion>
     <!--showing content on page from API-->
-    <section>
+    <section id="content-contaier">
         <div id="heading"></div>
         <div id="listings"></div>
         <div id="rating">

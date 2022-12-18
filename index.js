@@ -88,7 +88,7 @@ function showAnime(anime) {
                    <p>${description}</p>
                    <h3>episodes: </h3>
                    <p>"${episodeCount}"</p>
-                   <h3>episode Length: <h3>
+                   <h3>episode Length: </h3>
                    <p>${episodeLength} minutes</p>`;
 
       //ratings
@@ -215,8 +215,9 @@ let post = document.getElementById('comment-form')
 post.addEventListener('submit', (e)=> {
   // eliminate refresh feature 
   e.preventDefault()
+  
+  
   var commentBoxValue= document.getElementById("new_comment_text").value;
- 
   var li = document.createElement("li");
   var text = document.createTextNode(commentBoxValue);
   li.appendChild(text);
@@ -226,6 +227,18 @@ post.addEventListener('submit', (e)=> {
   post.reset()
 })
    
+
+//login form
+// let closeMe = document.getElementById('close-btn')
+// closeMe.addEventListener('click', (e) => {
+   //e.parentNode.remove()
+// })
+
+// let login = document.getElementById('lgn-btn')
+// login.addEventListener('submit', (e)=>{
+//   e.preventDefault()
+
+// })
 
 //work out search bar functionality
 let search =document.getElementById('search-form')
