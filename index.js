@@ -67,8 +67,7 @@ function showings(){
      groupManga.addEventListener('click', getManga)
      groupCategories.addEventListener('click', getCategories)
      
-      groupManga.onclick = function(){document.getElementsByClassName('information').innerHTML = ''};
-      groupAnime.onclick = function(){document.getElementsByClassName('information').innerHTML = ''};
+
 }
 
 

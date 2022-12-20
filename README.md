@@ -14,7 +14,7 @@ Clone the work from github into their local environment, make sure that they hav
 open the work can be done through vsCode or any another text editor you have on your device. The text editor is needed so as to see what scripting the work actually uses.
 
 the project can also be launched through the link below:
-
+ https://iristhuo.github.io/EGOIST/
 
 
 ###  API USED
