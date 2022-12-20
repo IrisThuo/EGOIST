@@ -97,7 +97,6 @@ header {
     position: fixed;
     width: 100%;
     left: 0;
-    
  }
 
  h3{
@@ -123,19 +122,18 @@ header {
  
 
 .login-container{
+    z-index:10000; 
     position: absolute;
     top:50%;
     left:50%;
     transform:  translate(-50%, -50%);
-}
-
-.login-container{
     background: thistle;
     width: 410px;
     padding: 30px;
     box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
-
 }
+
+
 
 .login-container .close-btn{
     position: absolute;
