@@ -43,7 +43,7 @@ headers : {
 
 }
 
- let container = document.createElement("info");
+    container = document.createElement("info");
     container.className = "information"
 
   function showings(){
@@ -79,6 +79,8 @@ function showAnime(anime) {
 
     let {canonicalTitle, posterImage, description, episodeCount, episodeLength} = anime.attributes
 
+  
+
   container.innerHTML = `
                    <h3>${canonicalTitle}<h3>
                    <img src="${posterImage.medium}">
@@ -100,48 +102,15 @@ function showAnime(anime) {
   <li class="rating-item" data-rate="4"></li>
   <li class="rating-item" data-rate="5"></li>`
 
-  // let rate1 = document.createElement('li')
-  // rate1.className="rating-item"
-  // rate1.setAttribute("data-rate", "1")
-  // let rate2 = document.createElement('li')
-  // rate2.className="rating-item"
-  // rate2.setAttribute("data-rate", "2")
-  // let rate3 = document.createElement('li')
-  // rate3.className="rating-item"
-  // rate3.setAttribute("data-rate", "3")
-  // let rate4 = document.createElement('li')
-  // rate4.className="rating-item"
-  // rate4.setAttribute("data-rate", "4")
-  // let rate5 = document.createElement('li')
-  // rate5.className="rating-item"
-  // rate5.setAttribute("data-rate", "5")
-  
-  // rates.appendChild(rate1)
-  // rates.appendChild(rate2)
-  // rates.appendChild(rate3)
-  // rates.appendChild(rate4)
-  // rates.appendChild(rate5)
-  
-
-  // rates.onclick = e => {
-  //   const elClass = e.target.classList;
-  //   if(!elClass.contains('active')){
-  //     items.forEach(
-  //       item => item.classList.remove('active')
-  //     )
-  //     console.log(e.tarfet.getAttribute("data-rate"));
-  //     elClass.add(active)
-  //   }
-  //}
 
   container.appendChild(rates)
 
   
 
    document.querySelector("#listings").appendChild(container);
+    
+    }
 
-   
-}
 
 //Rating functionality
 function rating(){
@@ -161,7 +130,9 @@ function showManga(manga){
   document.getElementById("welcome-page").style.display = "none";
   let { canonicalTitle, posterImage, description, chapterCount, updatedAt} = manga.attributes
 
-    
+
+
+
   container.innerHTML = `
                    <h3>${canonicalTitle}<h3>
                    <img src="${posterImage.medium}">
@@ -190,6 +161,9 @@ function showManga(manga){
 function showCategories(categories){
   document.getElementById("welcome-page").style.display = "none";
   let { title, totalMediaCount, nsfw, createdAt, updatedAt} = categories.attributes
+
+  
+
 
   container.innerHTML = `
                    <h3>${title}<h3>
@@ -230,29 +204,25 @@ post.addEventListener('submit', (e)=> {
   document.getElementById("center").style.display = "none";
   })
 
-//login form
-// let closeMe = document.getElementById('close-btn')
-// closeMe.addEventListener('click', (e) => {
-   //e.parentNode.remove()
-// })
-
-// let login = document.getElementById('lgn-btn')
-// login.addEventListener('submit', (e)=>{
-//   e.preventDefault()
-
-// })
 
 //work out search bar functionality
 let search =document.getElementById('search-form')
 search.addEventListener('submit', (e)=> {
-
   // eliminate refresh feature 
   e.preventDefault()
 
   //to reset search bar
   search.reset();
 
-
+  let searchVal = document.getElementById('search').value
+  fetch("https://kitsu.io/api/edge/" + searchVal, {
+    method: "GET",
+    headers: {
+      Accept: "application/vnd.api+json",
+      "Content-Type": "application/vnd.api+json",
+    }
+  })
+   
   })
 
  
