@@ -43,8 +43,10 @@ headers : {
 
 }
 
-function showings(){
- 
+ let container = document.createElement("info");
+    container.className = "information"
+
+  function showings(){
      let groupAnime = document.createElement('navigation')
      groupAnime.innerHTML=`
      <button>ANIME</button>`
@@ -72,16 +74,11 @@ function showings(){
 
 
 
- 
-
-
 function showAnime(anime) {
    document.getElementById("welcome-page").style.display = "none";
 
     let {canonicalTitle, posterImage, description, episodeCount, episodeLength} = anime.attributes
 
-    let container = document.createElement("div");
-    container.className = "information"
   container.innerHTML = `
                    <h3>${canonicalTitle}<h3>
                    <img src="${posterImage.medium}">
@@ -164,9 +161,7 @@ function showManga(manga){
   document.getElementById("welcome-page").style.display = "none";
   let { canonicalTitle, posterImage, description, chapterCount, updatedAt} = manga.attributes
 
-     
-  let container = document.createElement("info");
-  container.className = "information"
+    
   container.innerHTML = `
                    <h3>${canonicalTitle}<h3>
                    <img src="${posterImage.medium}">
@@ -196,15 +191,15 @@ function showCategories(categories){
   document.getElementById("welcome-page").style.display = "none";
   let { title, totalMediaCount, nsfw, createdAt, updatedAt} = categories.attributes
 
-  let container = document.createElement("info");
-  container.className = "information"
   container.innerHTML = `
-                   <h2>${title}<h2>
-                   <h3>${totalMediaCount}</h3>
-                   <p>NSFW Status: ${nsfw}</p>
-                   <h3>Created At: </h3>
+                   <h3>${title}<h3>
+                   <h2>Available Titles number:</h2>
+                   <p>${totalMediaCount}<p>
+                   <h2>NSFW status:</h2>
+                   <p>${nsfw}</p>
+                   <h2>Created At: </h2>
                    <p>${createdAt} </p>
-                   <h3>Updated At: </h3>
+                   <h2>Updated At: </h2>
                    <p>${updatedAt}</p>`;
           
 
