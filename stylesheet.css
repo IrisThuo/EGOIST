@@ -16,6 +16,7 @@
     margin-top: 5px;
 }
 
+
 #listings .information .info{
     float: right;
 }
@@ -258,4 +259,27 @@ body #content-container .information {
     content: "\2606";
 }
 
+#start-up img{
+   width:50%;
+   height:400;
+   display: block;
+   margin-left: auto;
+   margin-right: auto;
+}
 
+#welcome-page p{
+    text-align: center;
+    color: #48CAE4;
+}
+
+#welcome-page h3{
+    text-align: center;
+}
+
+#commenting{
+    text-align: center;
+}
+
+#commenting h3{
+    text-align: center;
+}

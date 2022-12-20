@@ -234,8 +234,6 @@ post.addEventListener('submit', (e)=> {
   document.getElementById("center").style.display = "none";
   })
 
-   
-
 //login form
 // let closeMe = document.getElementById('close-btn')
 // closeMe.addEventListener('click', (e) => {
