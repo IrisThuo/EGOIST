@@ -12,8 +12,8 @@
 #position{
     top:0;
     position: fixed;
-    width: 99%;
-    margin-top: 5px;
+    width: 100%;
+    left: 0;
 }
 
 
@@ -31,7 +31,9 @@
     height: 30px;  
 }
 
-
+body{
+    background-color: #CAF0F8;
+}
 
 header {
     padding: 30px;
@@ -39,7 +41,6 @@ header {
     background: #03045E;
     color: white;
     font-size: 30px;
-    overflow: hidden; 
  }
 
  #nav button{
@@ -94,8 +95,9 @@ header {
  #bottom{
     bottom:0;
     position: fixed;
-    width: 99%;
-    margin-bottom: 5px;
+    width: 100%;
+    left: 0;
+    
  }
 
  h3{
@@ -285,3 +287,4 @@ body #content-container .information {
 #commenting h3{
     text-align: center;
 }
+
