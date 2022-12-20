@@ -227,6 +227,13 @@ post.addEventListener('submit', (e)=> {
   //to reset comment box
   post.reset()
 })
+
+
+  let btn=document.getElementById("close-btn")
+  btn.addEventListener('click' , (e) => {
+  document.getElementById("center").style.display = "none";
+  })
+
    
 
 //login form
