@@ -79,7 +79,7 @@ function showings(){
 function showAnime(anime) {
     let {canonicalTitle, posterImage, description, episodeCount, episodeLength} = anime.attributes
 
-    let container = document.createElement("info");
+    let container = document.createElement("div");
     container.className = "information"
   container.innerHTML = `
                    <h3>${canonicalTitle}<h3>
@@ -89,7 +89,8 @@ function showAnime(anime) {
                    <h3>episodes: </h3>
                    <p>"${episodeCount}"</p>
                    <h3>episode Length: </h3>
-                   <p>${episodeLength} minutes</p>`;
+                   <p>${episodeLength} minutes</p>
+                   `;
 
       //ratings
   let rates= document.createElement('ul')
@@ -218,7 +219,7 @@ post.addEventListener('submit', (e)=> {
   
   
   var commentBoxValue= document.getElementById("new_comment_text").value;
-  var li = document.createElement("li");
+  var li = document.createElement("comment");
   var text = document.createTextNode(commentBoxValue);
   li.appendChild(text);
   document.getElementById("comment-section").appendChild(li);

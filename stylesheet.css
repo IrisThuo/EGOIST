@@ -18,8 +18,12 @@
 
 body{
     
+}
 
-    
+
+
+#listings .information .info{
+    float: right;
 }
 
 #search-form #search{
@@ -32,9 +36,8 @@ body{
     height: 30px;  
 }
 
-#content-container{
-    float:left;
-}
+
+
 header {
     padding: 30px;
     text-align: center;
@@ -210,13 +213,13 @@ form .btn button{
     cursor: pointer;
 }
 
-#content-container{
+body #content-container .information {
     position:absolute;
     top: 50px;
     left:0px;
     right:0px;
     bottom:0px;
-    overflow-y:scroll; 
+     
 }
 
 #search-form{
