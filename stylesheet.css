@@ -268,11 +268,13 @@ body #content-container .information {
 }
 
 #welcome-page p{
+    display: block;
     text-align: center;
     color: #48CAE4;
 }
 
 #welcome-page h3{
+    display: block;
     text-align: center;
 }
 

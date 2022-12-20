@@ -77,6 +77,8 @@ function showings(){
 
 
 function showAnime(anime) {
+   document.getElementById("welcome-page").style.display = "none";
+
     let {canonicalTitle, posterImage, description, episodeCount, episodeLength} = anime.attributes
 
     let container = document.createElement("div");
@@ -160,7 +162,7 @@ function rating(){
 }
 
 function showManga(manga){
-  
+  document.getElementById("welcome-page").style.display = "none";
   let { canonicalTitle, posterImage, description, chapterCount, updatedAt} = manga.attributes
 
      
@@ -192,6 +194,7 @@ function showManga(manga){
 }
 
 function showCategories(categories){
+  document.getElementById("welcome-page").style.display = "none";
   let { title, totalMediaCount, nsfw, createdAt, updatedAt} = categories.attributes
 
   let container = document.createElement("info");
