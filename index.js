@@ -213,7 +213,6 @@ function showCategories(categories){
    
 }
 
-
   //Work out Comment section Functionality
 let post = document.getElementById('comment-form')
 post.addEventListener('submit', (e)=> {
@@ -258,9 +257,13 @@ search.addEventListener('submit', (e)=> {
 
   //to reset search bar
   search.reset();
+
+
   })
 
+ 
 
+  
 
 
  
